@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "auto_next",
+  "version": "1.0",
+  "description": "Automatically clicks the Next button to play the next video.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://phitron.io/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Phitron Easy"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://phitron.io/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
