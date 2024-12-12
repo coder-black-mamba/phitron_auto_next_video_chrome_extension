@@ -6,17 +6,12 @@ function setupVideoEventListener() {
         console.log("Phitron Easy: Video element found. Adding event listener...");
         video.addEventListener("ended", () => {
             console.log("Phitron Easy: Video ended! Attempting to click the Next button...");
-            const buttons = document.querySelectorAll("button"); // Adjust selector if needed
-            
-            const nextButton=buttons[29];
-            console.log(buttons);
-            console.log(nextButton);
-
+            const nextButton = document.querySelector("button[aria-label='next']");
             if (nextButton) {
                 nextButton.click();
-                console.log("Phitron Easy: Next button clicked!");
+                console.log("Next button clicked!");
             } else {
-                console.warn("Phitron Easy: Next button not found!");
+                console.warn("Next button not found!");
             }
         });
         video.setAttribute("phitron-listener", "true"); // Prevent multiple listeners
