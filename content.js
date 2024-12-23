@@ -7,10 +7,22 @@ function setupVideoEventListener() {
         video.addEventListener("ended", () => {
             console.log("Phitron Easy: Video ended! Attempting to click the Next button...");
             const buttons = document.querySelectorAll("button"); // Adjust selector if needed
-            
+            // const fullscreenButton = buttons[28];
+            // console.log(fullscreenButton);
             const nextButton=buttons[29];
-            console.log(buttons);
-            console.log(nextButton);
+            // console.log(buttons);
+            // console.log(nextButton);
+
+            // check if the video is in fullscreen mode
+            // if (fullscreenButton) {
+            //     fullscreenButton.click();
+            //     console.log("Phitron Easy: Fullscreen button clicked!");
+            // }
+            if (document.fullscreenElement === video) {
+                console.log('The video is in fullscreen mode.');
+            } else {
+                console.log('The video is not in fullscreen mode.');
+            }
 
             if (nextButton) {
                 nextButton.click();
