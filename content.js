@@ -6,29 +6,12 @@ function setupVideoEventListener() {
         console.log("Phitron Easy: Video element found. Adding event listener...");
         video.addEventListener("ended", () => {
             console.log("Phitron Easy: Video ended! Attempting to click the Next button...");
-            const buttons = document.querySelectorAll("button"); // Adjust selector if needed
-            // const fullscreenButton = buttons[28];
-            // console.log(fullscreenButton);
-            const nextButton=buttons[29];
-            // console.log(buttons);
-            // console.log(nextButton);
-
-            // check if the video is in fullscreen mode
-            // if (fullscreenButton) {
-            //     fullscreenButton.click();
-            //     console.log("Phitron Easy: Fullscreen button clicked!");
-            // }
-            if (document.fullscreenElement === video) {
-                console.log('The video is in fullscreen mode.');
-            } else {
-                console.log('The video is not in fullscreen mode.');
-            }
-
+            const nextButton = document.querySelector("button[aria-label='next']");
             if (nextButton) {
                 nextButton.click();
-                console.log("Phitron Easy: Next button clicked!");
+                console.log("Next button clicked!");
             } else {
-                console.warn("Phitron Easy: Next button not found!");
+                console.warn("Next button not found!");
             }
         });
         video.setAttribute("phitron-listener", "true"); // Prevent multiple listeners
