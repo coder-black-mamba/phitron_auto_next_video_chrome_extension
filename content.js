@@ -9,7 +9,7 @@ function setupVideoEventListener() {
             const nextButton = document.querySelector("button[aria-label='next']");
             if (nextButton) {
                 nextButton.click();
-                console.log("Next button clicked!");
+                console.log("Next button clicked!"); 
             } else {
                 console.warn("Next button not found!");
             }
