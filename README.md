@@ -1,3 +1,5 @@
+# PLease Contribute TO "dev" branch
+
 # Phitron Next Chrome Extension
 
 **Phitron Next** is a simple Chrome extension designed to automate video playback by automatically clicking the "Next" button once a video finishes. It enhances user experience by eliminating the need to manually click the button after each video, providing a smoother, uninterrupted viewing experience.
