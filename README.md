@@ -47,7 +47,10 @@ Feel free to fork this repository, make improvements, and submit pull requests. 
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+```markdown
+This project is open source and available under the [GNU General Public License v3.0](LICENSE).
+
+```
 
 ## Contact
 
